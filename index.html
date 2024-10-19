@@ -1,8 +1,41 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header Image</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;  /* Needed for absolute positioning */
+    text-align: center;  /* Center the text */
+}
+
+.header-image {
+    width: 100%;  /* Makes the image scale to full width */
+    height: auto;  /* Maintains aspect ratio */
+    display: block;  /* Removes bottom space in some browsers */
+}
+
+h1 {
+    position: absolute;  /* Positioning the text over the image */
+    top: 50%;  /* Center vertically */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Adjust for center */
+    color: white;  /* Text color */
+}
+    </style>
+</head>
 <body>
-<h1>Hello PADDIES</h1>
-<img src="Images/jbbq.jpg" alt="BBQ Banjoing">
-<p>Slainte.</p>
+    <header>
+        <img src="Images/Header.jpg" alt="Header Image" class="header-image">
+        <h1>Welcome Paddies!</h1>
+    </header>
+    <img src="Images/jbbq.jpg" alt="BBQ Banjoing">
+    <p>Slainte.</p>
 </body>
 </html>
