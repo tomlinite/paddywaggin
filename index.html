@@ -10,66 +10,86 @@
     <style>
         body, html {
     margin: 0;
-    padding: 0;
 }
 
 header {
-    position: relative;  /* Needed for absolute positioning */
+    position: relative;  
     text-align: center;
 }
 
 .header-image {
-    background-image: url('Images/Header2.jpg'); /* Replace with your image */
-    background-size: cover; /* Cover the whole header */
-    background-position: 0% 50%; /* Center the image */
-    height: 600px; /* Set a height for the header */
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    width: 100%;  /* Makes the image scale to full width */
-    display: block;   /*Removes bottom space in some browsers */
+    background-image: url('Images/Header2.jpg');
+    background-size: cover; 
+    background-position: center; /* Center the image */
+    height: 50vh; /* Responsive height */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
 }
 
 h1 {
-    position: absolute;  /* Positioning the text over the image */
-    top: 50%;  /* Center vertically */
-    left: 50%;  /* Center horizontally */
-    transform: translate(-50%, -50%);  /* Adjust for center */
-    font-family: 'Montserrat', sans-serif; /* Change to your desired font */
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    font-family: 'Montserrat', sans-serif; 
     font-weight: bold;
-    font-size: 4em; /* Adjust the size as needed */
-    color: #77e2ad;  /* Text color */
+    font-size: 4em; /* Base font size */
+    color: #77e2ad;  
 }
+
 .navbar {
-    position: absolute; /* Set the navbar to absolute positioning */
-    bottom: 0; /* Align it to the top of the header */
-    left: 0; /* Align it to the left */
-    right: 0; /* Align it to the right */
+    position: absolute; 
+    bottom: 10px; /* Adjust if necessary */
+    left: 0; 
+    right: 0; 
     padding: 10px 0;
 }
 
 .navbar ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the items */
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
 }
 
 .navbar li {
-    margin: 0 15px; /* Space between items */
+    margin: 0 15px; 
 }
 
 .navbar a {
-    color: #f7c282; /* Link color */
+    color: #f7c282; 
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Add some padding */
+    text-decoration: none; 
+    padding: 10px 15px; 
 }
 
 .navbar a:hover {
-    color: rgba(146, 16, 16, 0.2); /* Hover effect */
+    color: rgba(212, 22, 22, 0.582); 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; 
+    }
+
+    h1 {
+        font-size: 2.5em; /* Smaller font size on mobile */
+    }
+    
+    .header-image {
+        height: 40vh; /* Adjust height for smaller screens */
+    }
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
 }
     </style>
 </head>
