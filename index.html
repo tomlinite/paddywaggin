@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header Image</title>
+    <title>PADDY WAGGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         body, html {
     margin: 0;
@@ -12,13 +15,19 @@
 
 header {
     position: relative;  /* Needed for absolute positioning */
-    text-align: center;  /* Center the text */
+    text-align: center;
 }
 
 .header-image {
+    background-image: url('Images/Header2.jpg'); /* Replace with your image */
+    background-size: cover; /* Cover the whole header */
+    background-position: 0% 50%; /* Center the image */
+    height: 600px; /* Set a height for the header */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     width: 100%;  /* Makes the image scale to full width */
-    height: auto;  /* Maintains aspect ratio */
-    display: block;  /* Removes bottom space in some browsers */
+    display: block;   /*Removes bottom space in some browsers */
 }
 
 h1 {
@@ -26,14 +35,58 @@ h1 {
     top: 50%;  /* Center vertically */
     left: 50%;  /* Center horizontally */
     transform: translate(-50%, -50%);  /* Adjust for center */
-    color: white;  /* Text color */
+    font-family: 'Montserrat', sans-serif; /* Change to your desired font */
+    font-weight: bold;
+    font-size: 4em; /* Adjust the size as needed */
+    color: #77e2ad;  /* Text color */
+}
+.navbar {
+    position: absolute; /* Set the navbar to absolute positioning */
+    bottom: 0; /* Align it to the top of the header */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+}
+
+.navbar li {
+    margin: 0 15px; /* Space between items */
+}
+
+.navbar a {
+    color: #f7c282; /* Link color */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add some padding */
+}
+
+.navbar a:hover {
+    color: rgba(146, 16, 16, 0.2); /* Hover effect */
 }
     </style>
 </head>
 <body>
     <header>
-        <img src="Images/Header.jpg" alt="Header Image" class="header-image">
-        <h1>Welcome Paddies!</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">SHOWS</a></li>
+                <li><a href="#">LINKS</a></li>
+                <li><a href="#">PICS</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>  
+        <div class="header-image">
+            <h1>PADDY WAGGIN</h1>
+        </div>
     </header>
     <img src="Images/jbbq.jpg" alt="BBQ Banjoing">
     <p>Slainte.</p>
